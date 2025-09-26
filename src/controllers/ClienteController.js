@@ -1,3 +1,5 @@
+// Criar endpoints para editar e deletar
+
 const Cliente = require("../models/Cliente");
 
 module.exports = {
