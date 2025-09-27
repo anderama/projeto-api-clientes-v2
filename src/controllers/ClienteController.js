@@ -44,6 +44,8 @@ module.exports = {
     try {
       const { id } = req.params;
       const cliente = await Cliente.findByPk(id);
+      await cliente.destroy();
+      return res.status(204).send();
     } catch (error) {
       return res.status(500).json({ error: "Erro ao deletar cliente" });
     }
